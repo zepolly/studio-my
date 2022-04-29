@@ -1,0 +1,24 @@
+.header {
+  background-color: @black;
+  padding: 50px 60px 60px 60px;
+  text-transform: uppercase;
+}
+
+.header__list {
+  display: grid;
+  grid-template-columns: min-content min-content min-content 1fr min-content min-content 125px;
+  gap: 30px;
+  text-align: center;
+  align-items: center;
+}
+
+.header__item-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__item:first-child {
+  border-left: 2px solid @pink;
+  padding: 3px 0 3px 3px;
+}

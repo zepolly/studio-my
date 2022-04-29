@@ -1,0 +1,54 @@
+.promo {
+  font-family: 'Forum', cursive;
+  text-transform: uppercase;
+  position: relative;
+  margin-top: -25px;
+  padding: 40px 60px;
+}
+
+.promo::after {
+  content: "";
+  position: absolute;
+  z-index: 4;
+  background-image: url("../img/vector-promo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 268px;
+  left: 0;
+  bottom: -118px;
+}
+
+.promo__video {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.promo__wrapper {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+}
+
+.promo__container {
+  padding-top: 70px;
+}
+
+.promo__title {
+  max-width: 575px;
+  font-weight: 400;
+  font-size: 84px;
+  line-height: 99px;
+}
+
+.promo__button {
+  padding: 30px 85px;
+  background: @pink-gradient;
+  color: @white;
+  border-radius: 60px;
+  border: none;
+}
