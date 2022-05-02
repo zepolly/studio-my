@@ -1,0 +1,90 @@
+.contacts {
+  padding: 60px;
+}
+
+.contacts__title {
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 113px;
+  text-transform: uppercase;
+}
+
+.contacts__wrap {
+  display: grid;
+  grid-template-columns: 580px 1fr;
+  gap: 200px;
+}
+
+.contacts__links {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.contacts__list {
+  color: @pink;
+  margin-bottom: 150px;
+}
+
+.contacts__subtitle {
+  margin: 40px;
+}
+
+.contacts__link {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.contacts__form-subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.contacts__form-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.contacts__form-input{
+  background-color: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid @white;
+  margin-bottom: 60px;
+  color: @pink;
+}
+
+.contacts__form-input-comment {
+  height: 80px;
+  text-overflow: ellipsis;
+}
+
+input[placeholder] {
+  text-overflow:ellipsis;
+}
+
+input::-moz-placeholder {
+  text-overflow:ellipsis;
+}
+
+input:-moz-placeholder {
+  text-overflow:ellipsis;
+}
+
+input:-ms-input-placeholder {
+  text-overflow:ellipsis;
+}
+
+.contacts__button {
+  padding: 30px 140px;
+  background: @pink-gradient;
+  color: @white;
+  border-radius: 60px;
+  border: none;
+  text-transform: uppercase;
+}
