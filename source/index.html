@@ -20,7 +20,10 @@
 
     <header class="header">
 
-      <nav class="header__nav">
+      <nav class="header__nav header__nav-closed header__nav-nojs">
+        <button class="header__toggle" type="button">
+            <span class="hidden">Открыть меню</span>
+        </button>
         <ul class="header__list">
           <li class="header__item">
             <a href="">о&nbsp;нас</a>
@@ -181,7 +184,7 @@
           <li class="services__item">
             <img src="img/statue-development.png" alt="статуя" width="650" class="services__img">
             <a href="" class="services__link">
-              <p class="services__subtitle">веб-разработка</p>
+              <p class="services__subtitle">сайт под ключ</p>
               <svg width="83" height="40" viewBox="0 0 83 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="services__link-arrow">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M79 22.2778H0V19.2778H79V22.2778Z" fill="white"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M79.7065 22.051C69.9218 15.9525 65.5358 11.03 60.0344 2.06296L62.5916 0.494143C67.8803 9.11463 71.9504 13.6819 81.2933 19.5051L79.7065 22.051Z" fill="white"/>
@@ -203,7 +206,7 @@
           <li class="services__item">
             <img src="img/statue-identity.png" alt="статуя" width="650" class="services__img">
             <a href="" class="services__link">
-              <p class="services__subtitle">айдентика</p>
+              <p class="services__subtitle">веб-разработка</p>
               <svg width="83" height="40" viewBox="0 0 83 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="services__link-arrow">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M79 22.2778H0V19.2778H79V22.2778Z" fill="white"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M79.7065 22.051C69.9218 15.9525 65.5358 11.03 60.0344 2.06296L62.5916 0.494143C67.8803 9.11463 71.9504 13.6819 81.2933 19.5051L79.7065 22.051Z" fill="white"/>
@@ -449,7 +452,56 @@
 
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a href="">главная</a>
+        </li>
+        <li class="footer__item">
+          <a href="">О НАС</a>
+        </li>
+        <li class="footer__item">
+          <a href="">ПОРТФОЛИО</a>
+        </li>
+        <li class="footer__item">
+          <a href="">УСЛУГИ</a>
+        </li>
+        <li class="footer__item">
+          <a href="">ЦЕНЫ</a>
+        </li>
+        <li class="footer__item">
+          <a href="">КОНТАКТЫ</a>
+        </li>
+      </ul>
+
+      <div class="footer__wrap">
+        <img src="img/logo-footer.png" width="198" alt="логотип">
+        <p class="footer__description">&copy; 2022 M-Y Studio. All rights reserved.</p>
+      </div>
+
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a href="">контакты</a>
+        </li>
+        <li class="footer__item">
+          <a href="">instagram</a>
+        </li>
+        <li class="footer__item">
+          <a href="">whatsapp</a>
+        </li>
+        <li class="footer__item">
+          <a href="">telegram</a>
+        </li>
+        <li class="footer__item">
+          <a href="">+7 (966)-188-68-62</a>
+        </li>
+        <li class="footer__item">
+          <a href="">m-ystudio@gmail.com</a>
+        </li>
+      </ul>
+
+    </footer>
 
     <script type="text/javascript">
 
@@ -463,8 +515,22 @@
       let fullPrice = document.getElementById('price');
       let inputs = document.querySelectorAll('.calculator__input');
       let numbers = [];
+      let navHeader = document.querySelector('.header__nav');
+      let navToggle = document.querySelector('.header__toggle');
 
-      buttonArrow.addEventListener('click', function() {
+      navHeader.classList.remove('header__nav-nojs');
+
+      navToggle.addEventListener('click', () => {
+        if (navHeader.classList.contains('header__nav-closed')) {
+          navHeader.classList.remove('header__nav-closed');
+          navHeader.classList.add('header__nav-opened');
+        } else {
+          navHeader.classList.add('header__nav-closed');
+          navHeader.classList.remove('header__nav-opened');
+        }
+      });
+
+      buttonArrow.addEventListener('click', () => {
         if (cardSecond.classList.contains('hidden')) {
           cardFirst.classList.add('hidden');
           cardSecond.classList.remove('hidden');
@@ -474,7 +540,7 @@
         }
       });
 
-      buttonRight.addEventListener('click', function(){
+      buttonRight.addEventListener('click', () => {
         offset = offset + 720;
         if (offset > 2880) {
           offset = 0;
@@ -482,7 +548,7 @@
         sliderLine.style.left = -offset + 'px';
       });
 
-      buttonLeft.addEventListener('click', function(){
+      buttonLeft.addEventListener('click', () => {
         offset = offset - 720;
         if (offset < 0) {
           offset = 2880;
@@ -493,7 +559,7 @@
       for( let i = 0; i < inputs.length; i++ ){
         numbers.push( inputs[i].value );
 
-        inputs[i].addEventListener('input', function(){
+        inputs[i].addEventListener('input', () => {
           numbers[i] = this.value;
           updateResults();
         });
