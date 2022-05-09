@@ -24,8 +24,11 @@
         <button class="header__toggle" type="button">
             <span class="hidden">Открыть меню</span>
         </button>
+        <a href="" class="header__link">
+          <img src="img/whatsapp.png" width="30" alt="вотсап">
+        </a>
         <ul class="header__list">
-          <li class="header__item">
+          <li class="header__item header__item-first">
             <a href="">о&nbsp;нас</a>
           </li>
           <li class="header__item">
@@ -34,11 +37,11 @@
           <li class="header__item">
             <a href="">услуги</a>
           </li>
-          <li class="header__item header__item-logo">
-            <a href="">
-              <img src="img/logo.png" width="76" alt="логотип веб-студии">
-            </a>
-          </li>
+        </ul>
+        <a href="" class="header__logo">
+          <img src="img/logo.png" width="72" alt="логотип веб-студии">
+        </a>
+        <ul class="header__list header__list-second">
           <li class="header__item">
             <a href="">цены</a>
           </li>
@@ -71,7 +74,11 @@
             <h1 class="promo__title">ВЕБ-РАЗРАБОТКА <span class="letter-italic">UI</span>/UX ДИЗАЙН АЙДЕНТИКА</h1>
             <button class="promo__button">РАСЧИТАТЬ СТОИМОСТЬ</button>
           </div>
-          <img src="img/statue-promo.png" width="722px" alt="статуя">
+          <picture>
+            <source media="(min-width: 720px)" srcset="img/statue-promo.png">
+            <img src="img/statue-promo-mobile.png" alt="статуя" class="promo__img">
+          </picture>
+
         </div>
 
       </section>

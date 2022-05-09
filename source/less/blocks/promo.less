@@ -3,7 +3,11 @@
   text-transform: uppercase;
   position: relative;
   margin-top: -25px;
-  padding: 40px 60px;
+  padding: 0 15px;
+
+  @media (min-width: @desktop-width) {
+    padding: 40px 60px;
+  }
 }
 
 .promo::after {
@@ -22,9 +26,13 @@
 .promo__video {
   z-index: 1;
   position: absolute;
-  top: 0;
+  top: 25px;
   left: 0;
   width: 100%;
+
+  @media (min-width: @desktop-width) {
+    top: 0;
+  }
 }
 
 .promo__wrapper {
@@ -35,14 +43,24 @@
 }
 
 .promo__container {
-  padding-top: 70px;
+  padding-top: 30px;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 70px;
+  }
 }
 
 .promo__title {
-  max-width: 575px;
   font-weight: 400;
-  font-size: 84px;
-  line-height: 99px;
+  font-size: 32px;
+  line-height: 35px;
+
+  @media (min-width: @desktop-width) {
+    max-width: 575px;
+    font-weight: 400;
+    font-size: 84px;
+    line-height: 99px;
+  }
 }
 
 .promo__button {
