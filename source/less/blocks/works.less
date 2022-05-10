@@ -1,42 +1,79 @@
 .works {
-  margin-top: 90px;
+  margin-top: 30px;
   position: relative;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 90px;
+  }
 }
 
 .works__line {
-  font-weight: 600;
-  font-size: 128px;
-  line-height: 150px;
-  color: @pink-opacity;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  color: @pink;
   text-transform: uppercase;
   position: absolute;
   left: 0;
   width: 120%;
+
+  @media (min-width: @desktop-width) {
+    font-size: 128px;
+    line-height: 150px;
+  }
 }
 
 .works__wrapper {
-  padding: 60px;
+  padding: 15px;
+
+  @media (min-width: @desktop-width) {
+    padding: 60px;
+  }
 }
 
 .works__title {
-  font-weight: 600;
-  font-size: 128px;
-  line-height: 150px;
+  position: relative;
+  z-index: 2;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
   text-transform: uppercase;
   margin-top: 10px;
-  margin-bottom: 80px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 128px;
+    line-height: 150px;
+    margin-bottom: 80px;
+  }
 }
 
 .works__list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 25px;
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
-.works__img {
-  background-color: @pink-light;
-  width: 450px;
-  height: 450px;
+
+.works__image:hover,
+.works__image:focus,
+.works__image:active {
+  box-shadow: 0px 4px 50px @pink;
+}
+
+@media (min-width: @desktop-width) {
+  .works__image {
+    filter: grayscale(100%);
+  }
+
+  .works__image:hover,
+  .works__image:focus,
+  .works__image:active {
+    filter:none;
+  }
 }
 
 .works__subtitle {
@@ -54,11 +91,26 @@
 
 .works__link-text {
   position: absolute;
-  left: 29%;
+  left: 18%;
   bottom: 39%;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   color: @pink-light;
   text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    left: 29%;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .works__item {
+    margin: 0 auto;
+  }
+
+  .works__link-circle {
+    width: 288px;
+    height: 288px;
+  }
 }

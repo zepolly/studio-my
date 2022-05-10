@@ -1,14 +1,24 @@
 .creators {
-  padding: 60px;
+  padding: 20px 15px;
   position: relative;
+
+  @media (min-width: @desktop-width) {
+    padding: 60px;
+  }
 }
 
 .creators__title {
   font-weight: 400;
-  font-size: 96px;
-  line-height: 113px;
+  font-size: 36px;
+  line-height: 42px;
   text-transform: uppercase;
-  text-align: right;
+  text-align: left;
+
+  @media (min-width: @desktop-width) {
+    font-size: 96px;
+    line-height: 113px;
+    text-align: right;
+  }
 }
 
 .creators__list {
@@ -19,41 +29,68 @@
 .creators__item {
   border: 3px solid @pink;
   border-radius: 60px;
-  padding: 49px 67px 47px 67px;
-  display: grid;
-  grid-template-columns: 350px 1fr;
-  column-gap: 54px;
-  align-items: center;
+  padding: 23px;
+
+  @media (min-width: @desktop-width) {
+    padding: 49px 67px 47px 67px;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    column-gap: 54px;
+    align-items: center;
+  }
 }
 
 .creators__img {
-  width: 350px;
-  height: 350px;
-  border-radius: 60px;
+  width: 242px;
+  height: 238px;
+  border-radius: 50px;
+  margin: 0 auto;
+  display: block;
+
+  @media (min-width: @desktop-width) {
+    border-radius: 60px;
+    width: 350px;
+    height: 350px;
+  }
 }
 
 .creators__subtitle {
   font-weight: 500;
-  font-size: 36px;
-  line-height: 42px;
   color: @pink;
+  font-size: 16px;
+  line-height: 19px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 36px;
+    line-height: 42px;
+  }
 }
 
 .creators__text {
   font-weight: 400;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 19px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+    line-height: 28px;
+  }
 }
 
 .creators__button {
   position: absolute;
-  bottom: 27%;
-  right: 0;
+  bottom: -6%;
+  right: 37%;
   background-color: inherit;
   border: none;
   cursor: pointer;
 
   path {
     fill: @pink;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 27%;
+    right: 0;
   }
 }
