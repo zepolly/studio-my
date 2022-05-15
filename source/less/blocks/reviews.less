@@ -1,46 +1,76 @@
 .reviews {
-  padding: 60px;
+  padding: 40px 15px;
   position: relative;
+
+  @media (min-width: @desktop-width) {
+    padding: 60px;
+  }
 }
 
 .reviews__line {
-  font-weight: 600;
-  font-size: 128px;
-  line-height: 150px;
-  color: @pink-opacity;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  color: @pink;
   text-transform: uppercase;
   position: absolute;
   left: 0;
   width: 120%;
+
+  @media (min-width: @desktop-width) {
+    font-size: 128px;
+    line-height: 150px;
+  }
 }
 
 .reviews__title {
+  position: relative;
   font-weight: 600;
-  font-size: 128px;
-  line-height: 150px;
+  font-size: 36px;
+  line-height: 42px;
   text-transform: uppercase;
-  margin-top: 70px;
-  margin-bottom: 80px;
+  z-index: 4;
+  margin-bottom: 35px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 70px;
+    font-size: 128px;
+    line-height: 150px;
+    margin-bottom: 80px;
+  }
 }
 
 .reviews__list {
   display: grid;
-  grid-template-columns: 680px 680px 680px 680px 680px 680px;
+  grid-template-columns: 288px 288px 288px 288px 288px 288px;
   position: relative;
   left: 0;
   transition: all ease 1s;
   gap: 40px;
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 680px 680px 680px 680px 680px 680px;
+  }
 }
 
 .reviews__item {
   border: 3px solid @pink;
-  border-radius: 100px;
-  padding: 30px 20px 15px 30px;
+  border-radius: 20px;
+  padding: 15px;
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 1fr;
   gap: 20px;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 15px;
+  line-height: 18px;
+
+
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    line-height: 19px;
+    grid-template-columns: 100px 1fr;
+    padding: 30px 20px 15px 30px;
+    border-radius: 100px;
+  }
 }
 
 .reviews__subtitle {
@@ -70,15 +100,34 @@
 }
 
 .reviews__button-right {
-  right: 0;
+  bottom: -5%;
+  right: 35%;
+
+  @media (min-width: @desktop-width) {
+    bottom: 25%;
+    right: 0;
+  }
 }
 
 .reviews__button-left {
-  left: 0;
-  transform: rotate(180deg);
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    left: 0;
+    transform: rotate(180deg);
+  }
 }
 
 .reviews__slider {
   width: 1400px;
   overflow: hidden;
+}
+
+.reviews__img {
+  width: 58px;
+
+  @media (min-width: @desktop-width) {
+    width: 100px;
+  }
 }

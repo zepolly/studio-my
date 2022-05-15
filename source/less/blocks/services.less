@@ -1,35 +1,62 @@
 .services {
-  padding: 60px;
+  padding: 15px;
   font-weight: 300;
   font-size: 48px;
   line-height: 56px;
   text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    padding: 60px;
+  }
 }
 
 .services__title {
   font-weight: 400;
-  font-size: 96px;
-  line-height: 113px;
-  margin-top: 30px;
+  font-size: 36px;
+  line-height: 42px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 30px;
+    font-size: 96px;
+    line-height: 113px;
+  }
 }
 
 .services__list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 770px;
-  gap: 100px;
+  grid-template-columns: 1fr;
   align-items: flex-end;
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 770px;
+    gap: 100px;
+  }
 }
 
 .services__item:first-child {
   text-align: center;
   position: relative;
   z-index: 4;
+  order: 4;
+  width: 175px;
+
+  @media (min-width: @desktop-width) {
+    order: 0;
+    width: 468px;
+  }
 }
 
 .services__subtitle {
+  font-size: 20px;
+  line-height: 23px;
   margin-top: 0;
   margin-bottom: 0;
+
+  @media (min-width: @desktop-width) {
+    font-size: 48px;
+    line-height: 56px;
+  }
 }
 
 .services__ellips {
@@ -40,7 +67,11 @@
 .services__link {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
+
+  @media (min-width: @desktop-width) {
+    gap: 30px;
+  }
 }
 
 .services__item:nth-child(3) {
@@ -50,6 +81,11 @@
 .services__img {
   position: relative;
   z-index: 3;
+  width: 288px;
+
+  @media (min-width: @desktop-width) {
+    width: 650px;
+  }
 }
 
 @keyframes move {
@@ -82,3 +118,30 @@
   animation: second 15s linear infinite;
 }
 
+@media (max-width: @mobile-width-only) {
+  .services__link-arrow {
+    width: 37px;
+  }
+
+  .services__item {
+    margin-bottom: 25px;
+  }
+
+  .services__item:first-child {
+    margin: 0 auto;
+  }
+
+  .services__ellipse {
+    width: 272px;
+    height: 90px;
+  }
+
+  .services__ellipse-second {
+    width: 304px;
+    height: 100px;
+  }
+
+  .services__item:nth-child(3) {
+    margin: 0 auto;
+  }
+}

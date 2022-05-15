@@ -1,59 +1,108 @@
 .prices {
-  padding: 60px;
+  padding: 0;
+
+  @media (min-width: @desktop-width) {
+    padding: 60px;
+  }
 }
 
 .prices__titles {
   font-weight: 400;
-  font-size: 96px;
-  line-height: 113px;
+  font-size: 36px;
+  line-height: 40px;
   text-transform: uppercase;
-  text-align: right;
+  text-align: left;
+  padding-left: 15px;
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    font-size: 96px;
+    line-height: 113px;
+    text-align: right;
+  }
 }
 
 .prices__item {
-  padding: 50px 0;
+  padding: 15px;
   border-top: 1px solid @white;
   display: grid;
-  grid-template-columns: 2fr 3fr 1fr;
+  grid-template-columns: 1fr;
   min-height: 158px;
   column-gap: 30px;
+
+  @media (min-width: @desktop-width) {
+    padding: 50px 0;
+    grid-template-columns: 2fr 3fr 1fr;
+  }
 }
 
 .prices__item:last-child {
-  border-bottom: 1px solid @white;
+  @media (min-width: @desktop-width) {
+    border-bottom: 1px solid @white;
+  }
 }
 
 .prices__title {
   font-weight: 500;
-  font-size: 36px;
-  line-height: 42px;
+  font-size: 24px;
+  line-height: 28px;
   text-transform: uppercase;
   color: @pink;
   text-align: left;
   margin-top: 0;
+
+  @media (min-width: @desktop-width) {
+    font-size: 36px;
+    line-height: 42px;
+  }
 }
 
 .prices__text {
   font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 15px;
+  line-height: 18px;
   margin-top: 0;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 21px;
+  }
 }
 
 .prices__column {
-  text-align: right;
+  text-align: left;
+
+  @media (min-width: @desktop-width) {
+    text-align: right;
+  }
 }
 
 .prices__price {
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 0;
   font-weight: 400;
   font-size: 36px;
   line-height: 42px;
   color: @pink;
   font-feature-settings: 'pnum' on, 'lnum' on;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 15px;
+  }
 }
 
 .prices__link {
-  margin-top: 50px;
+  margin: 15px;
+
+  @media (min-width: @desktop-width) {
+    margin: 50px 0;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .prices__column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

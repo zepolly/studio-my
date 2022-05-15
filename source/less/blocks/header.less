@@ -1,9 +1,13 @@
 .header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
   background-color: @black;
   padding: 10px 16px;
   text-transform: uppercase;
 
   @media (min-width: @desktop-width) {
+    position: relative;
     padding: 50px 60px 60px 60px;
   }
 }
