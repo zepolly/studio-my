@@ -88,3 +88,43 @@ ul {
     text-transform: uppercase;
   }
 }
+
+.link:focus,
+.link:hover {
+  box-shadow: 0px 4px 50px @pink;
+}
+
+.link:active {
+  box-shadow: 0px 4px 50px @pink;
+
+  @media (min-width: @desktop-width) {
+    transform: translate(50px,10px);
+  }
+}
+
+.button__link:focus,
+.button__link:hover,
+.button__link:active {
+  .button__arrow {
+    transform: scaleX(2);
+  }
+
+  .button__circle {
+    transform: translate(20px, 0);
+  }
+
+  .button__text {
+    transform: translate(40px, 0);
+  }
+}
+
+.arrow:focus,
+.arrow:hover,
+.arrow:active {
+  border: none;
+  transform: scaleX(1.5);
+}
+
+input {
+  outline: none;
+}

@@ -15,7 +15,7 @@
   text-transform: uppercase;
   position: absolute;
   left: 0;
-  width: 120%;
+  width: 100%;
 
   @media (min-width: @desktop-width) {
     font-size: 128px;
@@ -120,8 +120,12 @@
 }
 
 .reviews__slider {
-  width: 1400px;
+  width: 300px;
   overflow: hidden;
+
+  @media (min-width: @desktop-width) {
+    width: 1400px;
+  }
 }
 
 .reviews__img {
@@ -129,5 +133,11 @@
 
   @media (min-width: @desktop-width) {
     width: 100px;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .reviews__slider {
+    margin: 0 auto;
   }
 }
