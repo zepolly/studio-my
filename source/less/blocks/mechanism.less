@@ -1,0 +1,105 @@
+.mechanism__title {
+  @media (min-width: @desktop-width) {
+    text-align: right;
+    margin-top: 0;
+  }
+}
+
+.mechanism__container {
+  display: grid;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    gap: 73px;
+    grid-template-columns: 525px 1fr;
+    align-items: center;
+  }
+}
+
+.mechanism__images {
+  order: 2;
+  text-align: center;
+  margin-top: 50px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    order: 0;
+  }
+}
+
+.mechanism__img {
+  position: relative;
+  z-index: 5;
+}
+
+.mechanism__ellips {
+  bottom: 10%;
+  left: 20%;
+
+  @media (min-width: @desktop-width) {
+    bottom: 30%;
+    left: -5%;
+  }
+}
+
+.mechanism__ellipse {
+  width: 366px;
+  height: 140px;
+
+  @media (min-width: @desktop-width) {
+    width: 791px;
+    height: 303px;
+  }
+}
+
+.mechanism__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mechanism__item {
+  background-color: @white;
+  color: @black;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  border-radius: 40px;
+  padding: 30px;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    gap: 30px;
+    align-items: start;
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+.mechanism__number {
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  background-color: @pink;
+  border-radius: 60px;
+  width: 22px;
+  text-align: center;
+  color: @white;
+  padding: 10px;
+  margin: 0;
+}
+
+.mechanism__subtitle {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+.mechanism__description {
+  margin-bottom: 0;
+}

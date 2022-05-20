@@ -128,3 +128,74 @@ ul {
 input {
   outline: none;
 }
+
+.title-about {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    font-size: 96px;
+    line-height: 106px
+  }
+}
+
+.card {
+  border: 3px solid @pink;
+  border-radius: 60px;
+  padding: 23px;
+
+  @media (min-width: @desktop-width) {
+    padding: 45px;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    column-gap: 54px;
+    align-items: center;
+  }
+}
+
+.card__img {
+  width: 242px;
+  height: 238px;
+  border-radius: 50px;
+  margin: 0 auto;
+  display: block;
+
+  @media (min-width: @desktop-width) {
+    border-radius: 60px;
+    width: 350px;
+    height: 350px;
+  }
+}
+
+.card__subtitle {
+  font-weight: 500;
+  color: @pink;
+  font-size: 16px;
+  line-height: 19px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+.card__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.indent {
+  padding: 15px;
+
+  @media (min-width: @desktop-width) {
+    padding: 60px;
+  }
+}
