@@ -38,7 +38,7 @@
     left: 20%;
     opacity: 0.6;
     bottom: 5%;
-    z-index: 1;
+    z-index: 5;
     animation: circle 15s linear alternate infinite;
   }
 
@@ -52,7 +52,7 @@
     border-radius: 100px;
     right: 5%;
     bottom: 5%;
-    z-index: 1;
+    z-index: 4;
     animation: circle-right 17s linear alternate infinite;
   }
 
@@ -66,7 +66,7 @@
     left: 90%;
     opacity: 0.8;
     bottom: 55%;
-    z-index: 1;
+    z-index: 3;
     animation: circle 10s linear alternate infinite;
   }
 
@@ -80,7 +80,7 @@
     border-radius: 100px;
     right: 15%;
     bottom: 55%;
-    z-index: 1;
+    z-index: 2;
     animation: circle-right 12s linear alternate infinite;
   }
 
@@ -108,7 +108,7 @@
     border-radius: 100px;
     left: 0%;
     top: 0%;
-    z-index: 1;
+    z-index: 0;
     animation: circle 20s linear alternate infinite;
   }
 }
@@ -119,14 +119,14 @@
   line-height: 35px;
   text-transform: uppercase;
   margin-top: 100px;
+  position: relative;
+  z-index: 10;
 
   @media (min-width: @desktop-width) {
     font-weight: 400;
     font-size: 84px;
     line-height: 93px;
     margin-top: 200px;
-    position: relative;
-    z-index: 2;
   }
 }
 
@@ -139,6 +139,6 @@
 
   @media (min-width: @desktop-width) {
     width: 896px;
-    height: 785px;
+    height: 755px;
   }
 }
